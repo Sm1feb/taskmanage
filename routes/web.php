@@ -24,9 +24,16 @@ Route::get('/', function () {
 Route::get('/hlo', function () {
     return view('hlo');
 });
+Route::get('/project', function () {
+    return view('project');
+});
 Route::get('/contact', function () {
     return view('contact');
 });
+// Route::get('/image', function () {
+//     return view('image');
+// });
+Route::get('image','App\Http\Controllers\ContactController@display3');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -44,3 +51,5 @@ Route::resource('task',TaskController::class);
 Route::get('/logout-user','App\Http\Controllers\MController@logout');
 //--Contact Us --
 Route::post('/form-submit','App\Http\Controllers\ContactController@contact');
+//
+Route::post('index3','App\Http\Controllers\ContactController@update');
