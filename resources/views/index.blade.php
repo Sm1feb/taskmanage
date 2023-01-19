@@ -1,6 +1,9 @@
 @extends('layout')
 
 @section('main-content')
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+
 <div>
 <div class="float-start">
 <h4 class="pb-3">My Tasks</h4>
@@ -45,6 +48,9 @@ Create Task
 
           @if($task->status == "Todo")
               User-> {{$task->name}}
+              <a href="{{url('view/'.$task->id)}}" class="btn btn-info">
+                View
+              </a>
           @else
              <del>{{$task->name}}</del>
           @endif
@@ -74,7 +80,9 @@ Create Task
           
            <small>Last Updated - {{ $task->updated_at->diffForHumans()}}</small>
 </div>
+
             <div class="float-end">
+           
             <a href="{{ route('task.edit',$task->id) }}" class="btn btn-success">
                     Edit 
              </a>
@@ -160,7 +168,9 @@ Create Task
                            <span class="font-normal">{{ $row->created_at }}</span>
                        </div>
                        <div class="p-6 bg-yellow-400 rounded-full h-4 w-4 flex items-center justify-center text-2xl text-white mt-4 shadow-lg cursor-pointer">+</div>
-                     </div>
+                       <div class=""><a href="{{url('comment4/'.$row->id)}}"><i class='fas fa-trash-alt'  style="margin-left:24px;margin-top:98px;height:10px;font-size:24px;"></i></a></div>
+                  
+                      </div>
                    </div>
                  </div>
                </div>

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ViewController;
 use App\Models\Com;
 use App\Models\User;
 /*
@@ -43,8 +44,13 @@ require __DIR__.'/auth.php';
 
 //Comment In Sites
 Route::post('comment2/{id}','App\Http\Controllers\MController@comment2');
+//delete comment 
+Route::get('comment4/{id}','App\Http\Controllers\MController@comment4');
 //---All Comments and task are View In it----
 Route::get('/index',[TaskController::class,'index'])->name('index');
+//----View 
+// Route::resource('view',ViewController::class);
+Route::get('view/{id}','App\Http\Controllers\MController@view4');
 //---Create task--
 Route::resource('task',TaskController::class);
 //logout Website----

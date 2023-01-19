@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\reg;
 use App\Models\Com;
+use App\Models\Task;
 Use Session;
 class MController extends Controller
 {
@@ -73,5 +74,19 @@ public function comment2(Request $request)
 
         }
         return redirect("/index");
+}
+public function comment4($id)
+{
+    $task = Com::findOrFail($id);
+    $task->delete();
+    return redirect()->route('index');
+}
+//
+public function view4($id)
+{
+    $data=Task::all();
+    //  $com=Com::all();
+    $findrec=Task::where('id',$id)->get();
+    return view('add1',compact('findrec','data'));
 }
 }
