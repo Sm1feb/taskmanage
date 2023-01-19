@@ -14,6 +14,7 @@
             <div class="text-left p-0 font-sans">
                 
                 <h1 class=" text-gray-800 text-3xl font-medium">Upload Your profile</h1>
+                <h3 class="text-gray-500 text-1xl font-small">When you upload your profiles our all members who make the profiles can see your gmail id .......</h3>
                 <h3 class="p-1 text-gray-700">Free forever. No payment needed.</h3>
             </div>
             <form method="post" enctype="multipart/form-data" action="{{url('/index3')}}">

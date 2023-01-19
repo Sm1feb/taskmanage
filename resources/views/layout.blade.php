@@ -19,7 +19,7 @@
     <a class="navbar-brand" href="#">Task App</a>
   <a class="nav-link active" aria-current="page" href="{{url('/logout-user')}}" style="color: grey">Logout</a>
   <a class="nav-link active" aria-current="page" href="contact" style="color: grey">Contact Us</a>
-  <a class="nav-link active" aria-current="page" href="project" style="color: grey">Projects</a>
+  <a class="nav-link active" aria-current="page" href="project" style="color: grey">Profiles</a>
     {{-- <a class="nav-link" href="{{route('task.create')  }}" style="color: grey">New Task</a> --}} 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">

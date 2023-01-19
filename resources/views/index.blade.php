@@ -5,6 +5,7 @@
 <div class="float-start">
 <h4 class="pb-3">My Tasks</h4>
 </div>
+
 <div class="float-end">
 <a href="{{ route('task.create') }}" class="btn btn-info">
     Create Task
@@ -12,6 +13,18 @@
 </div>
 <div class="clearfix"></div>
 </div>
+@if(count($tasks) === 0)
+<center><div class="alert alert-danger p-2" style="width:500px;text-align:center;">
+  No Task Found. Please Create One task 
+  <br>
+  <br>
+  <a href="{{ route('task.create') }}" class="btn btn-info">
+Create Task
+</a>
+
+
+</div></center>
+@endif
 @foreach($tasks as $task)
 
         <div class="card">
@@ -156,18 +169,7 @@
       
        @endforeach 
          @endif
-        @if(count($tasks) === 0)
-        <div class="alert alert-danger p-2">
-          No Task Found. Please Create One task 
-          <br>
-          <br>
-          <a href="{{ route('task.create') }}" class="btn btn-info">
-    Create Task
-  </a>
-  
-  
-</div>
-        @endif
+       
 @endsection
 
 <!-- comment form -->

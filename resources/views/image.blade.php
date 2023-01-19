@@ -11,8 +11,8 @@
     <div class="py-16 bg-gradient-to-br from-green-50 to-cyan-50">  
         <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
             <div class="mb-12 space-y-2 text-center">
-              <span class="block w-max mx-auto px-3 py-1.5 border border-green-200 rounded-full bg-green-100 text-green-600">Blog</span>
-              <h2 class="text-2xl text-cyan-900 font-bold md:text-4xl">Sharing is Caring</h2>
+              <span class="block w-max mx-auto px-3 py-1.5 border border-green-200 rounded-full bg-green-100 text-green-600">Our All Members</span>
+              <h2 class="text-2xl text-cyan-900 font-bold md:text-4xl">You can see many Members of us who make their Profiles</h2>
               <p class="lg:w-6/12 lg:mx-auto">Quam hic dolore cumque voluptate rerum beatae et quae, tempore sunt, debitis dolorum officia aliquid explicabo? Excepturi, voluptate?</p>
             </div>
             <script src="https://cdn.tailwindcss.com"></script>
